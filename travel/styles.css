@@ -186,6 +186,7 @@ label {cursor: pointer;}
     width: 390px;
     height: 1475px;
     display: flex;
+    z-index: 0;
 }
 
 .nav_back_opacity {
@@ -577,6 +578,8 @@ background-position: center center;
 background-color: #0D606F;
 width: 100%;
 height: 46.98%;
+position: relative;
+z-index: 6;
 }
 
 .opacity {
