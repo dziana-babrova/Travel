@@ -1,4 +1,4 @@
-@media (max-width: 390px) {
+@media (max-width: 391px) {
 
     html {
     scroll-behavior: smooth;
@@ -65,7 +65,7 @@ overflow: hidden;
     flex-direction: row;
     margin: auto;
     justify-content: space-between;
-    padding-bottom: 1.75%;    
+    padding-bottom: 1.75%;   
 }
 
 .navigationpanel {
@@ -83,16 +83,16 @@ label {cursor: pointer;}
 .nav__showmenu {
 	width: 36px;
 	height: 32px;
-	position: relative;
+
 	overflow: hidden;
-    align-self: center;
+    align-self: flex-end;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     box-sizing: border-box;
     padding-top: 4px;
-    padding-right: 5px;
+    margin-left: 75%;
 }
 
 .nav__showmenu span {
