@@ -794,6 +794,275 @@ p.storytextv2 {
     opacity: 0.5;
     transform: scale(1.2);
 }
+
+.opacity-for-popup {
+ width: 100%;
+ height: 100%;
+ background-color: #110d0d65;
+ position: fixed;
+ top: 0;
+ z-index: 15;
+ visibility: hidden;
+}
+
+.popup {
+    position: absolute;
+    top:-100%;
+    left:50%;
+    transform:translate(-50%, 0);
+    margin: auto;
+    width: 90%;
+    max-width: 650px;
+    z-index: 20;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s linear;
+}
+
+.popup-active {
+    top:10%;
+}
+
+.disappearing-block {
+    display: flex;
+    flex-direction: column;
+    transition: all 1s linear;
+    width: 95%;
+}
+
+.signup-popup-title {
+   width: 100%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 28px;
+    color: #0D606F;
+    text-align: center;
+    display: none;
+}
+
+.login-popup-title {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 28px;
+    color: #0D606F;
+    text-align: center;
+}
+
+.login-with-facebook, .login-with-google {
+    padding: 0;
+    width: 95%;
+    height: 45px;
+    background: #1877F2;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    align-self: center;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-with-facebook:hover, .login-with-google:hover, .sign-in-button:hover {
+    cursor:pointer;
+    transform: scale(1.05);
+}
+
+.login-with-facebook:active, .login-with-google:active, .sign-in-button:active {
+    filter: opacity(0.5);
+}
+
+.facebook-logo {
+    margin-right: 16px;
+}
+
+.login-with-google {
+    background-color: #FFFFFF;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #0D606F;
+    border: none;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.google-logo {
+    margin-right: 16px;
+}
+
+.line-block {
+  width: 95%;
+  height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.line1 {
+    width: 50%;
+    border: none;
+    background-color: rgba(13, 96, 111, 0.5);
+    height: 1px;
+    margin-right: 9px;
+    margin: auto 0;
+}
+
+.line-divider {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(13, 96, 111, 0.5);
+}
+
+.email-caption{
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+    margin-bottom: 5px;
+}
+
+.fields-block {
+ width: 90%;
+}
+
+.email-field {
+    width: 100%;
+    height: 45px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="password"].email-field {
+    margin-bottom: 25px;
+}
+
+input[type="text"].email-field, input[type="password"].email-field {
+    color: #0D606F;
+    font-size: 24px;
+    font-family: 'Aleo';
+    font-style: italic;
+    padding-left: 20px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border: none;
+  outline:none;
+  transition: 0.4s;
+  font-size: 24px;
+}
+
+.sign-in-button {
+    width: 100%;
+    height: 45px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.sign-up-button {
+    width: 100%;
+    height: 45px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.forgot-password-link, .register-link, .login-link {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    text-align: center;
+}
+
+.forgot-password-link:hover, .register-link:hover, .login-link:hover {
+    opacity: 0.5;
+}
+
+
+.line2 {
+    width: 100%;
+    border: none;
+    background-color: rgba(13, 96, 111, 0.5);
+    height: 1px;
+    margin-bottom: 20px;
+    margin-top: 26px;
+}
+
+.register-text, .logintext-text {
+font-family: 'Aleo';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+color: rgba(13, 96, 111, 0.5);
+text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+text-decoration: none;
+margin-bottom: 23px;
+}
+
+.logintext-text {
+    display: none;
+}
+
 }
 
 @media (min-width: 390px) and (max-width: 391px) {
@@ -1585,6 +1854,275 @@ p.storytextv2 {
     opacity: 0.5;
     transform: scale(1.2);
 }
+
+.opacity-for-popup {
+ width: 100%;
+ height: 100%;
+ background-color: #110d0d65;
+ position: fixed;
+ top: 0;
+ z-index: 15;
+ visibility: hidden;
+}
+
+.popup {
+    position: absolute;
+    top:-100%;
+    left:50%;
+    transform:translate(-50%, 0);
+    margin: auto;
+    width: 90%;
+    max-width: 650px;
+    z-index: 20;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s linear;
+}
+
+.popup-active {
+    top:10%;
+}
+
+.disappearing-block {
+    display: flex;
+    flex-direction: column;
+    transition: all 1s linear;
+    width: 95%;
+}
+
+.signup-popup-title {
+   width: 100%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 28px;
+    color: #0D606F;
+    text-align: center;
+    display: none;
+}
+
+.login-popup-title {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 28px;
+    color: #0D606F;
+    text-align: center;
+}
+
+.login-with-facebook, .login-with-google {
+    padding: 0;
+    width: 95%;
+    height: 45px;
+    background: #1877F2;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    align-self: center;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-with-facebook:hover, .login-with-google:hover, .sign-in-button:hover {
+    cursor:pointer;
+    transform: scale(1.05);
+}
+
+.login-with-facebook:active, .login-with-google:active, .sign-in-button:active {
+    filter: opacity(0.5);
+}
+
+.facebook-logo {
+    margin-right: 16px;
+}
+
+.login-with-google {
+    background-color: #FFFFFF;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #0D606F;
+    border: none;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.google-logo {
+    margin-right: 16px;
+}
+
+.line-block {
+  width: 95%;
+  height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.line1 {
+    width: 50%;
+    border: none;
+    background-color: rgba(13, 96, 111, 0.5);
+    height: 1px;
+    margin-right: 9px;
+    margin: auto 0;
+}
+
+.line-divider {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(13, 96, 111, 0.5);
+}
+
+.email-caption{
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+    margin-bottom: 5px;
+}
+
+.fields-block {
+ width: 90%;
+}
+
+.email-field {
+    width: 100%;
+    height: 45px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="password"].email-field {
+    margin-bottom: 25px;
+}
+
+input[type="text"].email-field, input[type="password"].email-field {
+    color: #0D606F;
+    font-size: 24px;
+    font-family: 'Aleo';
+    font-style: italic;
+    padding-left: 20px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border: none;
+  outline:none;
+  transition: 0.4s;
+  font-size: 24px;
+}
+
+.sign-in-button {
+    width: 100%;
+    height: 45px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.sign-up-button {
+    width: 100%;
+    height: 45px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.forgot-password-link, .register-link, .login-link {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    text-align: center;
+}
+
+.forgot-password-link:hover, .register-link:hover, .login-link:hover {
+    opacity: 0.5;
+}
+
+
+.line2 {
+    width: 100%;
+    border: none;
+    background-color: rgba(13, 96, 111, 0.5);
+    height: 1px;
+    margin-bottom: 20px;
+    margin-top: 26px;
+}
+
+.register-text, .logintext-text {
+font-family: 'Aleo';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+color: rgba(13, 96, 111, 0.5);
+text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+text-decoration: none;
+margin-bottom: 23px;
+}
+
+.logintext-text {
+    display: none;
+}
+
 }
 
 @media (min-width: 391px) and (max-width:1439px) {
@@ -2314,6 +2852,273 @@ justify-content: space-between;
     opacity: 0.5;
     transform: scale(1.2);
 }
+
+.opacity-for-popup {
+ width: 100%;
+ height: 100%;
+ background-color: #110d0d65;
+ position: fixed;
+ top: 0;
+ visibility: hidden;
+}
+
+.popup {
+    position: absolute;
+    top:-100%;
+    left:50%;
+    transform:translate(-50%, 0);
+    margin: auto;
+    width: 70%;
+    max-width: 650px;
+    z-index: 20;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s linear;
+}
+
+.popup-active {
+    top:15%;
+}
+
+.disappearing-block {
+    display: flex;
+    flex-direction: column;
+    transition: all 1s linear;
+    width: 95%;
+}
+
+.signup-popup-title {
+   width: 100%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+    text-align: center;
+    display: none;
+}
+
+.login-popup-title {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+    text-align: center;
+}
+
+.login-with-facebook, .login-with-google {
+    padding: 0;
+    width: 95%;
+    height: 56px;
+    background: #1877F2;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    align-self: center;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-with-facebook:hover, .login-with-google:hover, .sign-in-button:hover {
+    cursor:pointer;
+    transform: scale(1.05);
+}
+
+.login-with-facebook:active, .login-with-google:active, .sign-in-button:active {
+    filter: opacity(0.5);
+}
+
+.facebook-logo {
+    margin-right: 16px;
+}
+
+.login-with-google {
+    background-color: #FFFFFF;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #0D606F;
+    border: none;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.google-logo {
+    margin-right: 16px;
+}
+
+.line-block {
+  width: 95%;
+  height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.line1 {
+    width: 50%;
+    border: none;
+    background-color: rgba(13, 96, 111, 0.5);
+    height: 1px;
+    margin-right: 9px;
+    margin: auto 0;
+}
+
+.line-divider {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(13, 96, 111, 0.5);
+}
+
+.email-caption{
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+    margin-bottom: 5px;
+}
+
+.fields-block {
+ width: 90%;
+}
+
+.email-field {
+    width: 100%;
+    height: 54px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="password"].email-field {
+    margin-bottom: 25px;
+}
+
+input[type="text"].email-field, input[type="password"].email-field {
+    color: #0D606F;
+    font-size: 24px;
+    font-family: 'Aleo';
+    font-style: italic;
+    padding-left: 20px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border: none;
+  outline:none;
+  transition: 0.4s;
+  font-size: 24px;
+}
+
+.sign-in-button {
+    width: 100%;
+    height: 54px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.sign-up-button {
+    width: 100%;
+    height: 54px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.forgot-password-link, .register-link, .login-link {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    text-align: center;
+}
+
+.forgot-password-link:hover, .register-link:hover, .login-link:hover {
+    opacity: 0.5;
+}
+
+
+.line2 {
+    width: 100%;
+    border: none;
+    background-color: rgba(13, 96, 111, 0.5);
+    height: 1px;
+    margin-bottom: 20px;
+    margin-top: 26px;
+}
+
+.register-text, .logintext-text {
+font-family: 'Aleo';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+color: rgba(13, 96, 111, 0.5);
+text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+text-decoration: none;
+margin-bottom: 23px;
+}
+
+.logintext-text {
+    display: none;
+}
 }
 
 @media (min-width: 1439px) {
@@ -3008,4 +3813,278 @@ color: #0D606F;
     opacity: 0.5;
     transform: scale(1.2);
 }
+
+.opacity-for-popup {
+ width: 100%;
+ height: 100%;
+ background-color: #110d0d65;
+ position: fixed;
+ top: 0;
+ visibility: hidden;
+ transition: all 0.5s linear;
+}
+
+.popup {
+    position: absolute;
+    top:-100%;
+    left:50%;
+    transform:translate(-50%, 0);
+    margin: auto;
+    width: 650px;
+    z-index: 20;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s linear;
+}
+
+.popup-active {
+    top:15%;
+}
+
+.disappearing-block {
+    display: flex;
+    flex-direction: column;
+    transition: all 1s linear;
+}
+
+.signup-popup-title {
+   width: 100%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+    text-align: center;
+    display: none;
+}
+
+.login-popup-title {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+    text-align: center;
+}
+
+.login-with-facebook, .login-with-google {
+    padding: 0;
+    width: 560px;
+    height: 56px;
+    background: #1877F2;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    align-self: center;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.login-with-facebook:hover, .login-with-google:hover, .sign-in-button:hover {
+    cursor:pointer;
+    transform: scale(1.05);
+}
+
+.login-with-facebook:active, .login-with-google:active, .sign-in-button:active {
+    filter: opacity(0.5);
+}
+
+.facebook-logo {
+    margin-left: 163.5px;
+    padding-top: 15px;
+    margin-right: 16px;
+}
+
+.facebook-button-caption{
+    padding-top: 15px;
+}
+
+.login-with-google {
+    background-color: #FFFFFF;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #0D606F;
+    border: none;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.google-logo {
+    margin-left: 173.5px;
+    padding-top: 15px;
+    margin-right: 16px;
+}
+
+.line-block {
+  width: 560px;
+  height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.line1 {
+    width: 261px;
+    border: none;
+    background-color: rgba(13, 96, 111, 0.5);
+    height: 1px;
+    margin-right: 9px;
+    margin: auto 0;
+}
+
+.line-divider {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(13, 96, 111, 0.5);
+}
+
+.email-caption{
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+    margin-left: 45px;
+    margin-bottom: 5px;
+}
+
+.email-field {
+    margin-left: 45px;
+    width: 560px;
+    height: 54px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="password"].email-field {
+    margin-bottom: 25px;
+}
+
+input[type="text"].email-field, input[type="password"].email-field {
+    color: #0D606F;
+    font-size: 24px;
+    font-family: 'Aleo';
+    font-style: italic;
+    padding-left: 20px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border: none;
+  outline:none;
+  transition: 0.4s;
+  font-size: 24px;
+}
+
+.sign-in-button {
+    margin-left: 45px;
+    width: 560px;
+    height: 54px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.sign-up-button {
+    margin-left: 45px;
+    width: 560px;
+    height: 54px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.forgot-password-link, .register-link, .login-link {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    text-align: center;
+}
+
+.forgot-password-link:hover, .register-link:hover, .login-link:hover {
+    opacity: 0.5;
+}
+
+
+.line2 {
+    width: 560px;
+    border: none;
+    background-color: rgba(13, 96, 111, 0.5);
+    height: 1px;
+    margin-left: 45px;
+    margin-bottom: 20px;
+    margin-top: 26px;
+}
+
+.register-text, .logintext-text {
+font-family: 'Aleo';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+color: rgba(13, 96, 111, 0.5);
+text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+text-decoration: none;
+margin-left: 216px;
+margin-bottom: 23px;
+}
+
+.logintext-text {
+    display: none;
+}
+
 }
