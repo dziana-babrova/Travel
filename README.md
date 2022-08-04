@@ -1,2 +1,2 @@
-# Travel
-https://dziana-babrova.github.io/Travel/
+# travel
+https://dziana-babrova.github.io/travel/
